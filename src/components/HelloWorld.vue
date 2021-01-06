@@ -11,7 +11,7 @@
       </el-col>
       <el-col :span="6">
         <div class="grid-content bg-purple">
-          <el-input v-model="input" placeholder="搜索课程" style="width: 235px;"></el-input>
+          <el-input v-model="input" placeholder="搜索课程" style="width: 220px;"></el-input>
           <el-button type="primary" icon="el-icon-search" style="float: right;height: 50px;margin-right: 50px;" @click="onSubmit">搜索
           </el-button>
         </div>
@@ -88,7 +88,7 @@
         <div>
           <el-carousel indicator-position="outside">
             <el-carousel-item v-for="item in itemlist" :key="item">
-              <img :src="item" style="width: 100%"/>
+              <img :src="item" style="width: 100% ;height: 350px"/>
             </el-carousel-item>
           </el-carousel>
         </div>
@@ -145,10 +145,18 @@
         jishu8: false,
         activeName: 'second',
         itemlist: [
-          "http://qlby72am6.hb-bkt.clouddn.com/FgmPvAcGaw1UFALJSyR3VDde9eBr",
-          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608200809172&di=032e99aa26aea1db61d30a358bb599f7&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Fnuomi%2Fpic%2Fitem%2F0e2442a7d933c8950977a723d91373f082020058.jpg",
-          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608200791659&di=56ebc529d45c1def8f1f97f2a855a5e4&imgtype=0&src=http%3A%2F%2Fimg02.saifutong.com%2F20150519%2F201505190438157587.jpg",
-          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608200835467&di=525a166552a703fd601ed76a568b5923&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170414%2F3853b0d543d640c5b6867efde490f58f_th.jpeg"
+          "https://p.qpic.cn/qqconadmin/0/02d64d9d9738413cb1a0f601312f358d/0?tp=webp",
+          "https://p.qpic.cn/qqconadmin/0/1461859ce2514a64962573f084565ed5/0",
+          "https://p.qpic.cn/qqconadmin/0/166c744f6e17441487b86c8a9c39131a/0?tp=webp",
+          "https://p.qpic.cn/qqconadmin/0/33e5a41648ca41cb8eeae3b2d2f94dda/0?tp=webp",
+          "https://p.qpic.cn/qqconadmin/0/3ed91d49cfbb47e991ae6e8d729715ed/0",
+          "https://p.qpic.cn/qqconadmin/0/4fefb910d80c4d3da9643b9a37a0b9ac/0?tp=webp",
+          "https://p.qpic.cn/qqconadmin/0/69b9ad7598184ef788cd1a1bea92461f/0?tp=webp",
+          "https://p.qpic.cn/qqconadmin/0/956def835e9b4b75a785084ad1ffa051/0",
+          "https://p.qpic.cn/qqconadmin/0/9c94e2d626414a69b3102e3e31fd89ac/0",
+          "https://p.qpic.cn/qqconadmin/0/d66f489b3d334872ab1e580fc5c3cb72/0?tp=webp",
+          "https://p.qpic.cn/qqconadmin/0/da0aa528d66640768f0a10e2971e8601/0?tp=webp",
+          "https://p.qpic.cn/qqconadmin/0/e869f9db47f445e68b2e59885594b749/0"
         ]
 
       }
@@ -157,7 +165,7 @@
       findAllCls:function(){
         /*axios.post("http://localhost:7000/class/findAllCls").then(res=>{
           if(res.data.code==200) {*/
-            this.$router.push("/internet")
+            this.$router.push("/findAllCls")
         /*  }
         })*/
       },

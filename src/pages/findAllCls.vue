@@ -1,5 +1,16 @@
 <template>
+
   <div style="margin-left: 100px">
+    <el-breadcrumb separator-class="iconfont" style="margin-left: 20px ;margin-right: 40px">
+      <el-breadcrumb-item :to="{ path: '/' }" style="font-size: 20px">首页</el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">IT互联网</a></el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">设计创作</a></el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">电商营销</a></el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">职业考证</a></el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">升学考研</a></el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">兴趣生活</a></el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/" style="color: black;font-size: 20px"><strong>语言留学</strong></a></el-breadcrumb-item>
+    </el-breadcrumb>
     <el-row>
       <el-col :span="6" v-for="o in clslist" :key="o">
         <el-card :body-style="{ padding: '10px' }">
@@ -37,9 +48,8 @@
 
     },
     mounted(){
-       axios.post("http://localhost:7000/class/clsName",{clsName:this.clsName}).then(res=>{
+       axios.post("http://localhost:7000/class/clsName").then(res=>{
          if(res.data.code==200){
-
            this.clslist=res.data.data;
          }
        })
@@ -49,6 +59,10 @@
 </script>
 
 <style scoped>
+  a{
+    margin-left: 30px;
+    font-size: 20px;
+  }
   .el-card{
     width: 300px  ;
   }
