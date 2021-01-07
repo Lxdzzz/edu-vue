@@ -1,13 +1,15 @@
 <template>
     <div>
-      <el-row>
-        <el-col :span="4" v-for="o in clslist" :key="o">
-          <el-card :body-style="{ padding: '10px' }">
-            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+      <div style="font-size: 30px ;line-height: 80px;margin: auto">精选特色课程</div>
+      <el-row style="margin-left: 100px" >
+        <el-col :span="5" v-for="o in clslist" :key="o" style="width: 240px;">
+          <el-card :body-style="{ padding: '0px' }" style="width: 220px;height: 200px;margin-top: 20px;margin-left: 20px">
+            <img :src="o.image" class="image"style="height: 124px;width: 220px">
             <div style="padding: 0px;">
-              <span>{{o}}</span>
-              <div class="bottom clearfix">
-                <time class="time">{{ currentDate }}</time>
+              <!-- <span style="display: inline-block ;width: 200px;line-height: 20px;height: 50px">{{o}}</span>-->
+              <div class="bottom clearfix" style="font-size: 10px;width: 200px" >
+                <div >{{o.clsname}}</div>
+                <div style="display: inline-block ">{{o.organname}}/{{ o.clsbyte}}</div>
               </div>
             </div>
           </el-card>
